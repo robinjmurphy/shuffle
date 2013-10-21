@@ -10,8 +10,12 @@ class Shuffle
     @index = 0
   end
 
+  def to_str
+    next_item.to_str
+  end
+
   def to_s
-    next_item.to_s
+    self.to_str
   end
 
   def next_item
