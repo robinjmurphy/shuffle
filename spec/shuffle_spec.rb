@@ -44,25 +44,25 @@ describe Shuffle do
 
     context 'when called the first time' do
       it 'should use the first integer' do
-        shuffle + 1 == 2
+        (shuffle + 1).should == 2
       end
     end
 
     context 'when called the second time' do
       it 'should use the second integer' do
-        shuffle + 1 == 3
+        (shuffle + 1).should == 3
       end
     end
 
     context 'when called the third time' do
       it 'should use the third integer' do
-        shuffle + 1 == 4
+        (shuffle + 1).should == 4
       end
     end
 
     context 'when called the fourth time' do
       it 'should use the first integer' do
-        shuffle + 1 == 2
+        (shuffle + 1).should == 2
       end
     end
   end
