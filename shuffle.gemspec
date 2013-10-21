@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["robin@robinmurphy.co.uk"]
   spec.description   = "An object shuffler"
   spec.summary       = "An object shuffler"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/robinjmurphy/shuffle"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
