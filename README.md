@@ -72,17 +72,11 @@ puts number + 1
 Add this line to your application's Gemfile:
 
 ```
-gem 'shuffle'
+gem 'shuffle', :git => 'git://github.com/robinjmurphy/shuffle.git'
 ```
 
 And then execute:
 
 ```
 bundle
-```
-
-Or install it yourself as:
-
-```
-gem install shuffle
 ```
