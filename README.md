@@ -50,7 +50,7 @@ call_api
 
 ### It's not just strings
 
-Any method you call on a Shuffle will be passed on to the next item in the list. This means you're not just limited to string. You can use a Shuffle to cycle through any set of objects.
+Any method you call on a Shuffle will be passed on to the next item in the list. This means you're not just limited to strings. You can use a Shuffle to cycle through any set of objects.
 
 ```ruby
 require 'shuffle'
