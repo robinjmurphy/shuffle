@@ -10,14 +10,11 @@ class Shuffle
     @index = 0
   end
 
-  def to_str
-    next_item.to_str
+  def method_missing(method, *args, &block)
+    next_item.send(method, *args, &block)
   end
 
-  def to_s
-    self.to_str
-  end
-
+  private
   def next_item
     next_item = @items[@index]
     @index = (@index + 1) % @items.length

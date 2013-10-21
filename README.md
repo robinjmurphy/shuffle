@@ -2,9 +2,11 @@
 
 You're at a hackathon. You're using a rate limited API. But what's that, you've managed to get hold of multiple API keys?
 
-Shuffle will let you cycle through your available keys when you make API calls. It's also just a simple way to cycle through the entires in _any_ array.
+Shuffle lets you cycle through your available keys when you make API calls.
 
-## What it does
+It's also a simple way to cycle through objects in _any_ array.
+
+## Usage
 
 ```ruby
 require 'shuffle'
@@ -18,22 +20,22 @@ puts my_string
 puts my_string
 # string3
 puts my_string
-# string4
+# string1
 ```
 
-## API key usage
+### Example with API keys
 
-Instead of passing a single API key directly to your REST client, pass it your Shuffle.
+Instead of passing a single API key to your REST client, pass it a Shuffle of API keys.
 
 ```ruby
 
 require 'shuffle'
 require 'rest_client'
 
-api_key = Shuffle.new ['key1', 'key2', 'key3']
+@api_key = Shuffle.new ['key1', 'key2', 'key3']
 
 def call_api
-    RestClient.get('http://my.api.com/some/resource/?api_key=' + api_key)
+    RestClient.get('http://my.api.com/some/resource/?api_key=' + @api_key)
 end
 
 call_api
@@ -46,16 +48,41 @@ call_api
 # Calls http://my.api.com/some/resource/?api_key=key1
 ```
 
+### It's not just strings
+
+Any method you call on a Shuffle will be passed on to the next item in the list. This means you're not just limited to string. You can use a Shuffle to cycle through any set of objects.
+
+```ruby
+require 'shuffle'
+
+number = Shuffle.new [1, 5, 10]
+
+puts number + 1
+# 2
+puts number + 1
+# 6
+puts number + 1
+# 11
+puts number + 1
+# 2
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'shuffle'
+```
+gem 'shuffle'
+```
 
 And then execute:
 
-    $ bundle
+```
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install shuffle
+```
+gem install shuffle
+```
