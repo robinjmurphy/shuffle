@@ -1,5 +1,7 @@
 # Shuffle
 
+[![Build Status](https://travis-ci.org/robinjmurphy/shuffle.png?branch=master)](https://travis-ci.org/robinjmurphy/shuffle)
+
 You're at a hackathon. You're using a rate limited API. But what's that, you've managed to get hold of multiple API keys?
 
 Shuffle lets you cycle through your available keys when you make API calls.
